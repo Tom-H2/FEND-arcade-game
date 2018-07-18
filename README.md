@@ -1,3 +1,5 @@
+This project represents the work of Thomas Harris as part of the Udacity/Grow with Google FEND course
+
 frontend-nanodegree-arcade-game
 ===============================
 
