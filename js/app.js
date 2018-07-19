@@ -1,4 +1,5 @@
 const player = new Player();
+const allEnemies = [...Array(3)].map((_,i)=> new Enemy(0,i));
 
 // Enemies our player must avoid
 /*var Enemy = function() {
