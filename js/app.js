@@ -1,6 +1,10 @@
 
 const player = new Player();
-const allEnemies = [...Array(3)].map((_,i)=> new Enemy(0,i+1));
+const enemyOne = new Enemy;
+//const enemyTwo = new EnemyTwo;
+const allEnemies = [];
+  allEnemies.push(enemyOne);
+
 
 // Enemies our player must avoid
 /*var Enemy = function() {
