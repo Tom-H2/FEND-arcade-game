@@ -13,6 +13,17 @@ class Entity { //holds object with inheritence
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
   }
+
+  checkCollisions(playerOrEnemy) {
+    if (this.y === playerOrEnemy.y) {
+      if (this.x >= playerOrEnemy.x - 0.5 && this.x <= playerOrEnemy.x + 0.5) { //sensitivity for collision
+        return true;
+      }
+    }
+    else {
+      return false;
+    }
+  }
 }
 
 class Player extends Entity {
