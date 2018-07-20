@@ -32,7 +32,7 @@ class Player extends Entity {
     this.sprite += 'char-boy.png';
   }
 
-  handleInput(input) {
+  handleInput(input) { //creates movement for player
     switch(input) {
       case 'left':
         this.x = this.x > 0 ? this.x - 1 : this.x;
@@ -54,8 +54,8 @@ class Enemy extends Entity {
   constructor(x, y) {
     super();
     this.sprite += 'enemy-bug.png';
-    this.x = x;
-    this.y = y;
+    this.x = 0;
+    this.y = .8;
   }
 
   update(dt) { //adds animation so that bugs move then reset
@@ -68,3 +68,13 @@ class Enemy extends Entity {
     }
   }
 }
+
+/*class EnemyTwo extends Enemy {
+  constructor() {
+    super();
+    this.sprite = 'Rock.png';
+    this.x = 0;
+    this.y = 1.8;
+  }
+}
+*/
