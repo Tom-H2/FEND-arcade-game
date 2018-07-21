@@ -26,7 +26,7 @@ class Entity { //holds object with inheritence
   }
 }
 
-class Player extends Entity {
+class Player extends Entity { //creates player
   constructor() {
     super();
     this.sprite += 'char-boy.png';
