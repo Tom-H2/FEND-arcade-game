@@ -15,7 +15,7 @@ class Entity { //holds object with inheritence
   }
 
   checkCollisions(playerOrEnemy) {
-    if (this.y === playerOrEnemy.y) {
+    if ((this.y-0.2) === playerOrEnemy.y) {
       if (this.x >= playerOrEnemy.x - 0.5 && this.x <= playerOrEnemy.x + 0.5) { //sensitivity for collision
         return true;
       }
@@ -68,13 +68,3 @@ class Enemy extends Entity {
     }
   }
 }
-
-/*class EnemyTwo extends Enemy {
-  constructor() {
-    super();
-    this.sprite = 'Rock.png';
-    this.x = 0;
-    this.y = 1.8;
-  }
-}
-*/
