@@ -1,10 +1,11 @@
 
 const player = new Player();
-const enemyOne = new Enemy;
-//const enemyTwo = new EnemyTwo;
+const enemyOne = new Enemy();
+const enemyTwo = new Enemy();
+const enemyThree = new Enemy();
 const allEnemies = [];
-  allEnemies.push(enemyOne);
-
+  allEnemies.push(enemyOne, enemyTwo, enemyThree);
+  console.log(allEnemies);
 
 // Enemies our player must avoid
 /*var Enemy = function() {
