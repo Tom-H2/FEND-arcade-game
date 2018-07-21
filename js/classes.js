@@ -59,12 +59,12 @@ class Enemy extends Entity {
     this.speed = speed;
   }
 
-  //enemyOne {
+  //enemyOne(x, y, speed) {
       //super();
       //this.x = 0;
       //this.y = 0.8;
       //this.speed = 1;
-  //}
+  }
 
   update(dt) { //adds animation so that bugs move then reset
     super.update();
