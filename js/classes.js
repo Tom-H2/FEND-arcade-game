@@ -51,12 +51,20 @@ class Player extends Entity { //creates player
 }
 
 class Enemy extends Entity {
-  constructor(x, y) {
+  constructor(x, y, speed) {
     super();
     this.sprite += 'enemy-bug.png';
     this.x = 0;
-    this.y = .8;
+    this.y = 0.8;
+    this.speed = speed;
   }
+
+  //enemyOne {
+      //super();
+      //this.x = 0;
+      //this.y = 0.8;
+      //this.speed = 1;
+  //}
 
   update(dt) { //adds animation so that bugs move then reset
     super.update();
