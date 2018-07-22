@@ -54,19 +54,13 @@ class Enemy extends Entity {
   constructor(x, y, speed) {
     super();
     this.sprite += 'enemy-bug.png';
-    this.x = 0;
-    this.y = 0.8;
+    this.x = x;
+    this.y = y;
     this.speed = speed;
+    }
   }
 
-  //enemyOne(x, y, speed) {
-      //super();
-      //this.x = 0;
-      //this.y = 0.8;
-      //this.speed = 1;
-  }
-
-  update(dt) { //adds animation so that bugs move then reset
+  /*update(dt) { //adds animation so that bugs move then reset
     super.update();
     if(this.isOutOfBoundsX) {
       this.x = -1;
@@ -74,5 +68,4 @@ class Enemy extends Entity {
     else {
       this.x += dt;
     }
-  }
-}
+  }*/
