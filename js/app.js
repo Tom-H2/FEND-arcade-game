@@ -1,8 +1,8 @@
 
 const player = new Player();
-const enemyOne = new Enemy();
-const enemyTwo = new Enemy();
-const enemyThree = new Enemy();
+const enemyOne = new Enemy(0, 0.8);
+const enemyTwo = new Enemy(1, 1.8);
+const enemyThree = new Enemy(2, 2.8);
 const allEnemies = [];
   allEnemies.push(enemyOne, enemyTwo, enemyThree);
   console.log(allEnemies);
