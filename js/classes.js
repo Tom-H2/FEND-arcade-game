@@ -58,14 +58,17 @@ class Enemy extends Entity {
     this.y = y;
     this.speed = speed;
     }
-  }
 
-  /*update(dt) { //adds animation so that bugs move then reset
-    super.update();
-    if(this.isOutOfBoundsX) {
-      this.x = -1;
-    }
-    else {
-      this.x += dt;
-    }
-  }*/
+    update(dt) { //adds animation so that bugs move then reset
+      // You should multiply any movement by the dt parameter
+      // which will ensure the game runs at the same speed for
+      // all computers.
+      super.update();
+        if(this.isOutOfBoundsX) {
+          this.x = -1;
+        }
+        else {
+          this.x += dt;
+        }
+    };
+}
