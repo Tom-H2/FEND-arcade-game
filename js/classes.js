@@ -7,7 +7,7 @@ class Entity { //holds object with inheritence
 
   update(dt) {
       this.isOutOfBoundsX = this.x > 5;
-      this.isOutOfBoundsY = this.y < 1;
+      this.isOutOfBoundsY = this.y < 1 || this.y > 5;
     }
 
   render() {
@@ -30,6 +30,22 @@ class Player extends Entity { //creates player
   constructor() {
     super();
     this.sprite += 'char-boy.png';
+    this.speed = 100 * (Math.random() * 5);
+    this.moving = false;
+    this.win = false;
+  }
+
+  update(dt) {
+    super.update();
+    if (this.isOutOfBoundsY && !this.moving && !this.win) {
+      alert("Win");
+      this.win = true;
+    }
+
+    //render() {
+      //super.render();
+      //this.moving = false;
+    //}
   }
 
   handleInput(input) { //creates movement for player
@@ -47,6 +63,7 @@ class Player extends Entity { //creates player
         this.y = this.y > 0 ? this.y + 1 : this.y;
         break;
     }
+    this.moving = true;
   }
 }
 
