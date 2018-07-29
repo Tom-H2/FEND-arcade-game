@@ -53,3 +53,12 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+function callModal() {
+	const modal = document.querySelector('.modal__body');
+	modal.classList.toggle('hide');
+}
+//callModal(); //keeps modal open for testing and styling
+//document.querySelector('.modal__close').addEventListener('click', () => {
+	//callModal();
+//});
