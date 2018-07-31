@@ -41,11 +41,6 @@ class Player extends Entity { //creates player
       alert("Win");
       this.win = true;
     }
-
-    //render() {
-      //super.render();
-      //this.moving = false;
-    //}
   }
 
   handleInput(input) { //creates movement for player
@@ -57,10 +52,10 @@ class Player extends Entity { //creates player
         this.y = this.y > 0 ? this.y - 1 : this.y;
         break;
       case 'right':
-        this.x = this.x > 0 ? this.x + 1 : this.x;
+        this.x = (this.x > -1 && this.x < 4) ? this.x + 1 : this.x;
         break;
       case 'down':
-        this.y = this.y > 0 ? this.y + 1 : this.y;
+        this.y = (this.y > 0 && this.y < 5) ? this.y + 1 : this.y;
         break;
     }
     this.moving = true;
@@ -85,7 +80,7 @@ class Enemy extends Entity {
           this.x = -1;
         }
         else {
-          this.x += dt;
+          this.x += this.speed*dt;
         }
     };
 }
