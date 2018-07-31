@@ -19,10 +19,6 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
-function resetEntities () {
-  update(dt);
-}
-
 function callModal() {
 	const modal = document.querySelector('.modal__body');
 	modal.classList.toggle('hide');
@@ -33,6 +29,6 @@ document.querySelector('.modal__close').addEventListener('click', () => {
 });
 
 document.querySelector('.modal__button').addEventListener('click', () => { //replay button on modal
-	callModal();
-  resetEntities();
+  window.location.reload(true);
+  callModal();
 });
