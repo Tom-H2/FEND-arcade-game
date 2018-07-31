@@ -1,8 +1,8 @@
 
 const player = new Player();
-const enemyOne = new Enemy(0, 0.8);
-const enemyTwo = new Enemy(1, 1.8);
-const enemyThree = new Enemy(2, 2.8);
+const enemyOne = new Enemy(0, 0.8, 100 * (Math.random() * 0.04));
+const enemyTwo = new Enemy(1, 1.8, 100 * (Math.random() * 0.05));
+const enemyThree = new Enemy(2, 2.8, 100 * (Math.random() * 0.06));
 const allEnemies = [];
   allEnemies.push(enemyOne, enemyTwo, enemyThree);
   console.log(allEnemies);
@@ -59,6 +59,6 @@ function callModal() {
 	modal.classList.toggle('hide');
 }
 //callModal(); //keeps modal open for testing and styling
-//document.querySelector('.modal__close').addEventListener('click', () => {
-	//callModal();
-//});
+document.querySelector('.modal__close').addEventListener('click', () => {
+	callModal();
+});
