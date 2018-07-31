@@ -38,9 +38,14 @@ class Player extends Entity { //creates player
   update(dt) {
     super.update();
     if (this.isOutOfBoundsY && !this.moving && !this.win) {
-      alert("Win");
       this.win = true;
+      callModal();
     }
+  }
+
+  render() {
+    super.render();
+    this.moving = false;
   }
 
   handleInput(input) { //creates movement for player
