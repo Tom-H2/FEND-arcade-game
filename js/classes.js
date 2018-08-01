@@ -13,8 +13,12 @@ class Entity { //holds object with inheritence
 	render() { //draws the 2d canvas for the game
 		ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
 	}
-
-	checkCollisions(playerOrEnemy) { //I based this function FEND tutorial GMT20180621-010258_FEND-Arcad_1600x900.mp4
+/* I based this function FEND tutorial GMT20180621-010258_FEND-Arcad_1600x900.mp4
+The function checks whether the enemies and the player inhabit the same space.
+Since the enemies' starting y position is at 0.8 the math at the this.y must -0.2.
+The second if statement sets the sensitivity to collision. Making the math more sensitive will make the game more difficult
+*/
+	checkCollisions(playerOrEnemy) {
 		if ((this.y - 0.2) === playerOrEnemy.y) { //establishes the math for y axis to recognize a collision
 			if (this.x >= playerOrEnemy.x - 0.8 && this.x <= playerOrEnemy.x + 0.8) { //sensitivity for collision
 				return true;
@@ -32,10 +36,12 @@ class Player extends Entity { //extends Entity object to create player
 		this.playerMove = false;
 		this.win = false; //sets check block condition for winning the game to false
 	}
-
-	update(dt) { //establishes conditions for winning the game
+/* Establishes conditions for winning the game
+Code runs as game updates and continuously checks the conditions
+*/
+	update(dt) {
 		super.update();
-		if (this.isOutOfBoundsY && !this.moving && !this.win) {
+		if (this.isOutOfBoundsY && !this.playerMove && !this.win) {
 			this.win = true;
 			callModal(); //calls modal to announce game has been won
 		}
