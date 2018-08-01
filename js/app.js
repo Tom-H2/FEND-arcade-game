@@ -1,3 +1,8 @@
+/* The first reviewer suggested using strict mode.
+I tried this from the start but got error codes related to the engine.js file, which was provided by Udacity.
+I have not been able to resolve issue that allEnemies is not recognized in the engine.js file.
+In the future I will use strict mode as the basis for my JavaScript code but feel I need to move on from this project
+*/
 const player = new Player();
 const enemyOne = new Enemy(0, 0.8, 100 * (Math.random() * 0.04)); //enemyOne through enemyThree run on the three rows of rock
 const enemyTwo = new Enemy(1, 1.8, 100 * (Math.random() * 0.05)); //the math allows for the speed to change at each game reset
