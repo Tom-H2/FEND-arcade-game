@@ -1,8 +1,8 @@
 class Entity { //holds object with inheritence
 	constructor() {
-		this.sprite = 'images/';
-		this.x = 2;
-		this.y = 5;
+		this.sprite = 'images/'; //acesses image folder for all enemies and player
+		this.x = 2; //sets "home" x axis
+		this.y = 5; //sets "home" y axis
 	}
 
 	update(dt) { //adds animation so that bugs move then reset
@@ -10,12 +10,12 @@ class Entity { //holds object with inheritence
 		this.isOutOfBoundsY = this.y < 1 || this.y > 5;
 	}
 
-	render() {
+	render() { //draws the 2d canvas for the game
 		ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
 	}
 
 	checkCollisions(playerOrEnemy) { //I based this function FEND tutorial GMT20180621-010258_FEND-Arcad_1600x900.mp4
-		if ((this.y - 0.2) === playerOrEnemy.y) {
+		if ((this.y - 0.2) === playerOrEnemy.y) { //establishes the math for y axis to recognize a collision
 			if (this.x >= playerOrEnemy.x - 0.8 && this.x <= playerOrEnemy.x + 0.8) { //sensitivity for collision
 				return true;
 			}
@@ -25,24 +25,23 @@ class Entity { //holds object with inheritence
 	}
 }
 
-class Player extends Entity { //creates player
+class Player extends Entity { //extends Entity object to create player
 	constructor() {
 		super();
 		this.sprite += 'char-boy.png';
-		this.speed = 100 * (Math.random() * 5);
 		this.playerMove = false;
-		this.win = false;
+		this.win = false; //sets check block condition for winning the game to false
 	}
 
-	update(dt) {
+	update(dt) { //establishes conditions for winning the game
 		super.update();
 		if (this.isOutOfBoundsY && !this.moving && !this.win) {
 			this.win = true;
-			callModal();
+			callModal(); //calls modal to announce game has been won
 		}
 	}
 
-	render() {
+	render() { //allows player to appear as it moves
 		super.render();
 		this.playerMove = false;
 	}
@@ -66,11 +65,11 @@ class Player extends Entity { //creates player
 	}
 }
 
-class Enemy extends Entity {
+class Enemy extends Entity { //extends Entity object into Enemy class
 	constructor(x, y, speed) {
 		super();
 		this.sprite += 'enemy-bug.png';
-		this.x = x;
+		this.x = x; //properties variables called in the specific enemies in app.js
 		this.y = y;
 		this.speed = speed;
 	}
