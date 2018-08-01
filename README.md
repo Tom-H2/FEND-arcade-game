@@ -1,8 +1,8 @@
 # This project represents the work of Thomas Harris as part of the Udacity/Grow with Google FEND course
 
-## I would not have been able to complete this project without the dedicated help of my Udacity mentor **Arvind Rathee**.
+### I would not have been able to complete this project without the dedicated help of my Udacity mentor **Arvind Rathee**.
 
->Also I based my classes.js file on the FEND tutorial posted on the Slack channel #Project_3 [Video-Link](GMT20180621-010258_FEND-Arcad_1600x900.mp4)
+>Also I based my classes.js file on the FEND tutorial posted on the Slack channel #Project_3 GMT20180621-010258_FEND-Arcad_1600x900.mp4
 
 # Instructions on how to Run and Play the Arcade Game:
   >To run the game:
