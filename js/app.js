@@ -17,7 +17,11 @@ document.addEventListener('keyup', function (e) {
 
 	player.handleInput(allowedKeys[e.keyCode]);
 });
-
+/* The modal is created in the index.html and is called upon winning the game. It contains tow
+eventListeners. The modal__close closes the modal but does not reset the game. modal__button resets the game.
+** The first Udacity reviewer pointed out that resetting the window is not best practice and I acknowledge this but feel I need to move on in the course
+** I would like to revisit this if I get caught up and have time
+*/
 function callModal() { //modal called in classes.js line 40 as condition of winning
 	const modal = document.querySelector('.modal__body');
 	modal.classList.toggle('hide'); //toggles off index.html to allow modal to appear
